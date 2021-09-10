@@ -31,6 +31,7 @@ html {
     right: 0;
     height: 46.4px;
     background-color: #000;
+    z-index: 1;
 }
 
 #nav {
@@ -109,9 +110,33 @@ html {
 }
 
 #slider {
+    position: relative;
     margin-top:46.4px;
-    min-height:200px;
-    background-color: #fff;
+    padding-top: 50%;
+    background: url('/assets/img/slider/three-people.jpg') top center / cover no-repeat; 
+
+}
+
+#slider .text-content {
+    position: absolute;
+    color: #fff;
+    bottom: 48px;
+    width: 100%;
+    /* left: 50%; Cach 1 nhung can phai xem lai
+    transform: translateX(-50%);  Xem lai phan can giua */
+    text-align: center;
+    
+}
+
+#slider .text-heading {
+    font-weight: 1.2;
+    font-size: 25px;
+}
+
+#slider .text-description {
+    font-size: 15px;
+    font-weight:700;
+    padding-top:25px;
 }
 
 #content {

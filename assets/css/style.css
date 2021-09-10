@@ -205,11 +205,6 @@ html {
     background-color: #000;
 }
 
-/* .ticket-list {
-    margin-top:42px;
-    background-color: #fff;
-} */
-
 .tickets-list {
     list-style: none;
     margin-top:42px;
@@ -242,6 +237,58 @@ html {
     line-height: 24px;
     margin-top:-3px;
     margin-right: 18px;
+}
+
+.places-list {
+    margin: 32px -8px 46px;
+}
+
+.place-item {
+    float: left;
+    padding: 0px 8px;
+    width: calc(100% / 3);   
+}
+
+.place-img {
+    width: 100%;
+    display:block; /* doan nay no la inline neu ko co block no bi ho mau den */
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+
+.place-body {
+    padding: 16px;
+    background-color: #fff;
+    font-size: 15px;
+}
+
+.place-heading {
+    font-size: 15px;
+}
+
+.place-date {
+    margin-top:15px;
+    color:#757575;
+}
+
+.place-desc {
+    margin-top:15px;
+}
+
+.place-buy-btn {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 11px 16px;
+    display:inline-block;
+    margin-top: 15px;
+}
+
+.place-buy-btn:hover {
+    background-color: #ccc;
+    color: #000;
 }
 
 #footer {

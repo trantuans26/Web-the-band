@@ -11,7 +11,7 @@ html {
 
 /* Step
 1. Tu ngoai vao trong
-2. Tu tren xuong duoi 
+2. Tu tren xuong duoi
 3. Tu tong quan den chi tiet
 
 1. Position
@@ -19,6 +19,7 @@ html {
 3. Color
 4. Design
 */
+/* common */
 .clear {
     clear: both;
 }
@@ -27,6 +28,47 @@ html {
     color: #fff !important;
 }
 
+.text-center {
+    text-align: center !important;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row:after {
+    content: "";
+    display:block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left:8px;
+    padding-right: 8px;
+}
+
+.col-three {
+    width: calc(100% / 3);
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-full {
+    width:100%;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+/* main */
 #main   {
 
 }
@@ -66,11 +108,11 @@ html {
 #nav li a {
     text-decoration: none;
     line-height: 46.4px;
-    padding: 0px 24px; 
+    padding: 0px 24px;
     display: inline-block;
 }
 
-#nav > li:hover > a, 
+#nav > li:hover > a,
 #nav .subnav > li:hover {
     color: #000;
     background-color: #ccc;
@@ -121,7 +163,7 @@ html {
     position: relative;
     margin-top:46.4px;
     padding-top: 50%;
-    background: url('/assets/img/slider/three-people.jpg') top center / cover no-repeat; 
+    background: url('/assets/img/slider/three-people.jpg') top center / cover no-repeat;
 
 }
 
@@ -133,7 +175,7 @@ html {
     /* left: 50%; Cach 1 nhung can phai xem lai
     transform: translateX(-50%);  Xem lai phan can giua */
     text-align: center;
-    
+
 }
 
 #slider .text-heading {
@@ -185,12 +227,6 @@ html {
     margin-top: 48px;
 }
 
-#content .member-item {
-    float: left;
-    width: calc(100% / 3);
-    text-align: center;
-}
-
 #content .member-name {
     font-size: 15px;
 }
@@ -240,13 +276,8 @@ html {
 }
 
 .places-list {
-    margin: 32px -8px 46px;
-}
-
-.place-item {
-    float: left;
-    padding: 0px 8px;
-    width: calc(100% / 3);   
+    margin-top: 32px;
+    margin-bottom:  46px;
 }
 
 .place-img {
@@ -280,10 +311,10 @@ html {
 .place-buy-btn {
     background-color: #000;
     color: #fff;
-    text-decoration: none;
     padding: 11px 16px;
     display:inline-block;
     margin-top: 15px;
+    border: none;
 }
 
 .place-buy-btn:hover {
@@ -291,6 +322,151 @@ html {
     color: #000;
 }
 
+/* Contat section */
+.contact-content {
+    margin-top: 48px;;
+}
+
+.contact-infor {
+    font-size: 18px;
+    line-height:1.6;
+}
+
+.contact-infor i[class*="ti-"] {
+    width: 30px;    
+    display: inline-block;  
+}
+
+.contact-form {
+    font-size: 15px; 
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.contact-form .form-submit {
+    background-color: #000;
+    border: none;
+    color: #fff;
+    padding: 10px 16px;
+    float:right;
+
+}
+/* Footer section */
 #footer {
 
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.open {
+    display:flex;
+}
+
+.modal-main {
+    background-color: #fff;
+    width: 900px;
+    min-height: 200px;
+    position: relative;
+    max-width:calc(100% - 32px);
+    animation: modalFadeIn ease 0.5s;
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 8px;
+    opacity: 0.8;
+}
+
+.modal-close:hover {
+    color: #000;
+    background-color: #ccc;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.modal-header {
+    background-color: #009688;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:30px;
+    color: #fff;
+    letter-spacing: 4px;
+}
+
+.modal-bag {
+    margin-right: 16px;
+}
+
+.modal-body {
+    padding: 16px;
+}
+
+.modal-label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.modal-input {
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.buy-tickets {
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    width: 100%;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 18px;
+    cursor: pointer;
+}
+
+.buy-tickets:hover {
+    opacity: 0.9;
+}
+
+.modal-footer {
+    padding:16px;
+    text-align: right;
+
+}
+
+.modal-footer a {
+    color: #2196F3;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
